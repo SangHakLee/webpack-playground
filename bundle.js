@@ -44,14 +44,32 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// require('!style!css!./style.css');
-	// require('!style!css!sass!./style.sass');
+	'use strict';
+
 	__webpack_require__(1);
-	var hello = __webpack_require__(5);
-	var world = __webpack_require__(6);
 
-	document.write(hello + ' ' + world + '!' );
+	var _hello = __webpack_require__(5);
 
+	var _hello2 = _interopRequireDefault(_hello);
+
+	var _world = __webpack_require__(6);
+
+	var _world2 = _interopRequireDefault(_world);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	document.write(_hello2.default + ' ' + _world2.default + ' !'); // require('!style!css!./style.css');
+	// require('!style!css!sass!./style.sass');
+
+	// es5
+	// require('./style.sass');
+	// var hello = require('./hello');
+	// var world = require('./world');
+	//
+	// document.write(hello + ' ' + world + '!' );
+
+
+	// es6
 
 /***/ },
 /* 1 */
@@ -405,15 +423,27 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = 'Hello';
+	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// module.exports = 'Hello';
+
+	exports.default = 'Hello';
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = 'World';
+	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// module.exports = 'World';
+
+	exports.default = 'World';
 
 /***/ }
 /******/ ]);
