@@ -10,8 +10,11 @@
 
 
 // es6
+import _ from 'underscore';
+
 import './style.sass';
 import hello from './hello';
 import world from './world';
 
 document.write( `${hello} ${world} !` );
+document.write( ` Get Random ${_.random(0, 100)}` );
